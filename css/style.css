@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --white: #fff;
+  --main: #009688;
+  --black: #222;
+  --bor: #bbb;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--main);
+}
+
+.container {
+  width: 690px;
+  background-color: var(--white);
+  border-radius: 7px;
+  padding: 30px;
+}
+
+.wrapper {
+  border: 1px solid var(--bor);
+  border-radius: 5px;
+}
+.wrapper .text-input {
+  display: flex;
+  border-bottom: 1px solid var(--bor);
+}
+
+.text-input .to-text {
+  border-left: 1px solid var(--bor);
+  border-radius: 0;
+}
+
+.text-input textarea {
+  height: 250px;
+  width: 100%;
+  border: none;
+  outline: none;
+  resize: vertical;
+  background: none;
+  font-size: 18px;
+  border-radius: 5px;
+  padding: 10px 15px;
+}
+
+.controls,
+li,
+.icons,
+.icons i {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.controls {
+  list-style: none;
+  padding: 12px 15px;
+}
+.controls .icons {
+  width: 38%;
+}
+.controls .row.from .icons {
+  padding-right: 15px;
+  border-right: 1px solid var(--bor);
+}
+.controls .row.to .icons {
+  padding-left: 15px;
+  border-left: 1px solid var(--bor);
+}
+.controls .icons i {
+  color: #9f9f9f;
+  font-size: 14px;
+  cursor: pointer;
+  width: 50px;
+  justify-content: center;
+}
+
+.controls .row select {
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 16px;
+}
+
+.controls .exchenge {
+  color: #9f9f9f;
+  cursor: pointer;
+}
+
+.container button {
+  width: 100%;
+  border: none;
+  outline: none;
+  background-color: var(--main);
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+  color: #fff;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+@media (max-width: 450px) {
+  .container {
+    width: 400px;
+    margin: 10px;
+  }
+
+  .text-input textarea {
+    height: 150px;
+  }
+  .text-input .to-text {
+    border-top: 1px solid var(--bor);
+    border-radius: 0;
+  }
+  .wrapper .text-input {
+    flex-direction: column;
+  }
+  .controls {
+    flex-direction: column;
+  }
+  .controls li {
+    padding: 5px;
+    margin: 5px 0;
+  }
+}
